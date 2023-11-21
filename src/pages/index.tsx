@@ -33,7 +33,7 @@ const Index = () => {
             justifySelf: 'center',
             margin: 'auto',
             marginBottom: 8,
-            borderRadius: 0
+            borderRadius: 0,
           }}
         />
       </Slide>

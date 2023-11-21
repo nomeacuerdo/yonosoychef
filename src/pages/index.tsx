@@ -28,11 +28,12 @@ const Index = () => {
           alt="Yo no soy Chef."
           src="/logo.png"
           sx={{
-            width: 128,
+            width: 'auto',
             height: 128,
             justifySelf: 'center',
             margin: 'auto',
             marginBottom: 8,
+            borderRadius: 0
           }}
         />
       </Slide>

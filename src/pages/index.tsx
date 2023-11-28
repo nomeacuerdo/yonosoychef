@@ -27,13 +27,17 @@ const Index = () => {
         <Avatar
           alt="Yo no soy Chef."
           src="/logo.png"
+          variant="square"
           sx={{
-            width: 'auto',
+            width: '100%',
             height: 128,
             justifySelf: 'center',
             margin: 'auto',
             marginBottom: 8,
-            borderRadius: 0,
+
+            img: {
+              objectFit: 'contain',
+            },
           }}
         />
       </Slide>

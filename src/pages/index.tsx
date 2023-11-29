@@ -1,6 +1,7 @@
-// import { useEffect } from 'react';
+import { forwardRef } from 'react';
 import { Grid, Avatar, Typography, Fade, Slide, Tooltip } from '@mui/material';
 import IconLink from '../mui/IconLink';
+
 // TODO: Add Helmet
 // export const meta: MetaFunction = () => {
 //   return [
@@ -8,64 +9,86 @@ import IconLink from '../mui/IconLink';
 //     { name: 'description', content: 'Bienvenidos a yo no soy chef' },
 //   ];
 // };
+interface LinkIconProps {
+  name: string;
+  url: string;
+}
+// eslint-disable-next-line react/display-name
+const LinkIcon = forwardRef<HTMLElement, LinkIconProps>(({ name, url }) => (
+  <IconLink
+    name={name}
+    url={url}
+  />
+));
 
 const Index = () => {
-  // useEffect(() => {
-  // }, []);
-
   return (
     <Grid
       container
       rowSpacing={4}
       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
     >
-      <Slide
-        in
-        direction="down"
-        timeout={{ appear: 500, enter: 300 }}
-      >
-        <Avatar
-          alt="Yo no soy Chef."
-          src="/logo.png"
-          variant="square"
-          sx={{
-            width: '100%',
-            height: 128,
-            justifySelf: 'center',
-            margin: 'auto',
-            marginBottom: 8,
-
-            img: {
-              objectFit: 'contain',
-            },
-          }}
-        />
-      </Slide>
-      <Fade
-        in
-        timeout={{ appear: 1500, enter: 1300 }}
-      >
-        <Typography
-          variant="h1"
-          gutterBottom
-        >
-          Todos los días serán viernes...
-        </Typography>
-      </Fade>
-      <Fade
-        in
-        timeout={{ appear: 2500, enter: 2300 }}
-      >
-        <Typography
-          variant="h3"
-          gutterBottom
-        >
-          ...pronto
-        </Typography>
-      </Fade>
       <Grid
         item
         xs={12}
+      >
+        <Slide
+          in
+          direction="down"
+          timeout={{ appear: 500, enter: 300 }}
+        >
+          <Avatar
+            alt="Yo no soy Chef."
+            src="/logo.svg"
+            variant="square"
+            sx={{
+              width: 192,
+              height: 192,
+              justifySelf: 'center',
+              margin: 'auto',
+
+              img: {
+                objectFit: 'contain',
+              },
+            }}
+          />
+        </Slide>
+      </Grid>
+      <Grid item>
+        <Fade
+          in
+          timeout={{ appear: 1500, enter: 1300 }}
+        >
+          <Typography
+            variant="h1"
+            gutterBottom
+          >
+            Todos los días serán viernes...
+          </Typography>
+        </Fade>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+      >
+        <Fade
+          in
+          timeout={{ appear: 2500, enter: 2300 }}
+        >
+          <Typography
+            variant="h3"
+            gutterBottom
+          >
+            Pronto.
+          </Typography>
+        </Fade>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          marginTop: 3,
+        }}
       >
         <Fade
           in
@@ -73,25 +96,19 @@ const Index = () => {
         >
           <div>
             <Tooltip title="Instagram">
-              <IconLink
+              <LinkIcon
                 name="instagram"
                 url="https://instagram.com/yonosoychef"
               />
             </Tooltip>
-            <Tooltip title="Facebook">
-              <IconLink
-                name="facebook"
-                url="https://www.facebook.com/yonosoychef"
-              />
-            </Tooltip>
             <Tooltip title="Whatsapp">
-              <IconLink
+              <LinkIcon
                 name="whatsapp"
                 url="https://wa.link/d76aiy"
               />
             </Tooltip>
             <Tooltip title="Menu">
-              <IconLink
+              <LinkIcon
                 name="menu"
                 url="/menu.pdf"
               />

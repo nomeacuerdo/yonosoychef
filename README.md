@@ -1,8 +1,3 @@
-- React
-- Vite
-- Typescript
-- Material UI
-- ESLint
-- Prettier
+# Deploy New Menu version
 
-Based on [this template](https://github.com/andres-espinoza/template-vite-react-typescript-mui-eslint-prettier-custom-theme.git)
+Run `npm run build` and `firebase deploy`

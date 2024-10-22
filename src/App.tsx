@@ -1,15 +1,25 @@
-import { ThemeProvider } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
 import Index from './pages/index';
-import theme from './mui/theme';
+import IndexEN from './pages/en/index';
 import Layout from './mui/Layout';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <Index />
-      </Layout>
-    </ThemeProvider>
+    <Routes>
+      <Route
+        path="/"
+        element={<Layout />}
+      >
+        <Route
+          index
+          element={<Index />}
+        />
+        <Route
+          path="en"
+          element={<IndexEN />}
+        />
+      </Route>
+    </Routes>
   );
 };
 

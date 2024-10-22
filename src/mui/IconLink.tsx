@@ -1,4 +1,4 @@
-import { Link } from '@mui/material';
+import { Link, Avatar } from '@mui/material';
 import {
   Instagram,
   WhatsApp,
@@ -45,6 +45,40 @@ const IconLink = ({ name, url }: { name: string; url: string }) => {
             width: 48,
             height: 48,
             marginRight: 4,
+          }}
+        />
+      )}
+      {name === 'english' && (
+        <Avatar
+          alt="English"
+          src="/english.svg"
+          variant="square"
+          sx={{
+            width: 48,
+            height: 48,
+            justifySelf: 'center',
+            display: 'inline-block',
+            marginRight: 4,
+            img: {
+              objectFit: 'contain',
+            },
+          }}
+        />
+      )}
+      {name === 'espanol' && (
+        <Avatar
+          alt="Español"
+          src="/spanish.svg"
+          variant="square"
+          sx={{
+            width: 48,
+            height: 48,
+            justifySelf: 'center',
+            display: 'inline-block',
+            marginRight: 4,
+            img: {
+              objectFit: 'contain',
+            },
           }}
         />
       )}

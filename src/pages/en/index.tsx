@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Avatar, Typography, Fade, Slide, Tooltip } from '@mui/material';
-import IconLink from '../mui/IconLink';
+import IconLink from '../../mui/IconLink';
 
 // TODO: Add Helmet
 // export const meta: MetaFunction = () => {
@@ -22,7 +22,7 @@ const LinkIcon = forwardRef<HTMLElement, LinkIconProps>(({ name, url }) => (
   />
 ));
 
-const Index = () => {
+const IndexEN = () => {
   return (
     <Grid
       container
@@ -64,7 +64,7 @@ const Index = () => {
             variant="h1"
             gutterBottom
           >
-            Todos los días serán viernes...
+            Every day will be Friday...
           </Typography>
         </Fade>
       </Grid>
@@ -80,7 +80,7 @@ const Index = () => {
             variant="h3"
             gutterBottom
           >
-            Pronto.
+            Soon.
           </Typography>
         </Fade>
       </Grid>
@@ -111,14 +111,14 @@ const Index = () => {
             <Tooltip title="Menu">
               <LinkIcon
                 name="menu"
-                url="/menu-es.pdf"
+                url="/menu-en.pdf"
               />
             </Tooltip>
-            <Tooltip title="English">
-              <Link to="/en">
+            <Tooltip title="Español">
+              <Link to="/">
                 <Avatar
-                  alt="English"
-                  src="/english.svg"
+                  alt="Español"
+                  src="/spanish.svg"
                   variant="square"
                   sx={{
                     width: 48,
@@ -140,4 +140,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default IndexEN;

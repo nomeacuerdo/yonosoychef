@@ -111,7 +111,7 @@ const Index = () => {
             <Tooltip title="Menu">
               <LinkIcon
                 name="menu"
-                url="/menu-es.pdf"
+                url="/menu.pdf"
               />
             </Tooltip>
             <Tooltip title="English">
